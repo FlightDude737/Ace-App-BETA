@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  
-    PLEASE READ THIS WHENEVER YOU EDIT CODE                           THANK YOU!
+    PLEASE READ/UPDATE THIS WHENEVER YOU EDIT CODE                           THANK YOU!
 
 NOTE: POST ALL THINGS YOU DID TO THE CODE BELOW
 Date     Name   Note
@@ -12,19 +12,20 @@ Date     Name   Note
 3/26/20  Drew   Started work on Navigation Menu
 3/27/20  Ben/Drew  Setup Splash screen and Time Out
 3/31/20  Ben/Drew  Completed Navigation Animations as well as comments on code
+4/3/20   Ben    Restructured Code
 
 
 POST ANYTHING YOU NEED ME TO DO, OR THINGS I NEED YOU TO DO BELOW
 
 Drew - Please get google drawing in code Thank you this is going to be a great app!!!
 
-Drew - Please get the navigation bar to not animate when logging in
-
 POST ANY NOTES BELOW
 ------------post notes here----------
+
 For final App make sure to set the time out to 3000 not 1000
 
 -->
+<title>Ace Airlines App | BETA</title>
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -109,82 +110,10 @@ For final App make sure to set the time out to 3000 not 1000
               <input type="text" style="width: 100%; height: 100%; border: none; outline: none; font-family: Montserrat; font-weight: 300;" placeholder="Login with your password.">
               </fieldset>
 
-              <button type="button" style="width: 60%; height: 35px; border-radius: 20px; background-color: #e60f0f; border: none;margin-top: 30px; box-shadow: 0 0 20px rgba(230, 15, 15, 0.4); color: white; font-family: Montserrat;" onclick="login()">LOG IN</button>
+              <button type="button" style="width: 60%; height: 35px; border-radius: 20px; background-color: #e60f0f; border: none;margin-top: 30px; box-shadow: 0 0 20px rgba(230, 15, 15, 0.4); color: white; font-family: Montserrat;" onclick="window.location='home.html'">LOG IN</button>
             </form>
           </center>
         </div>
-      </div>
-    </div>
-    
-    <!--home-->
-    <div id="render_main" style="display: none; overflow: hidden;">
-      <div style="width: 100vw; height: 100vh; position: absolute; background-image: url(images/AceBackground.png); background-size: 100vw; top: 0px; left: 0px;">
-        <center>
-          <div style="width: 90%; height: 40px; position: relative; margin-top: 20px;">
-            <img src="images/hamburger.png" style="width: 40px; position: absolute; left: 0px;" onclick="animateNav('true')">
-            <img src="images/profile.png" style="width: 30px; position: absolute; right: 3px; top: 3px;">
-          </div>
-          <div style="width: 90%; height: 100px; position: relative; margin-top: 20px;">
-            <h1 style="font-family: Montserrat; font-weight: 900; color: white; margin: 0px; font-size: 30px;">See Places You've Never Seen Before</h1>
-            <p style="font-family: Montserrat; font-weight: 300; color: white; margin: 0px; margin-top: 10px;font-size: 20px;">WITH ACE AIRLINES</p>
-            <button style="font-family: Montserrat; width: 150px; height: 30px; border: 2px solid white; border-radius: 7px; margin-top: 15px; background-color: transparent; font-family: Montserrat; color: white;">LEARN MORE</button><br>
-            <img src="images/threeDots.png" style="width: 50px; margin-top: 15px;">
-          </div>
-          <!--Coronvirus Button-->
-          <div style="width: 90%; height: 50px; position: relative; margin-top: 20px; box-shadow: 0 0 7px rgba(0, 0, 0, 0.4); background-color: white; border-radius: 10px; margin-top: 135px;">
-            <img src="images/virus.png" style="position: absolute; width: 26px; top: 20%; left: 20px;">
-            <p style="font-family: Montserrat; font-weight: 300; width: 280px; position: absolute; top: 50%; margin-top: -13px; height: 24px; right: 15px; font-size: 20px;">CORONAVIRUS UPDATE</p>
-          </div>
-          <div style="width: 90%; height: 120px; position: relative; margin-top: 30px; background-color: transparent; border-radius: 10px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; text-align: left;">
-            
-            <!--Book Now Button-->
-            <div style="background-color: white; width: 47%; height: 90%; position: absolute; top: 0px; left: 0px; display: inline-block; border-radius: 20px; box-shadow: 0 0 12px rgba(0, 0, 0, 0.4); text-align: center;" onclick="window.location='bookFlight.html'">
-              <img src="images/book.png" style="width: 35px; margin-top: 15px;">
-              <hr style="width: 60px; height: 3px; background-color: #e60f0f; border: 1px;">
-              <p style="font-family: Montserrat; letter-spacing: 3px; margin-top: 0px;font-weight: 600;">BOOK</p>
-            </div>
-
-            <!--Check In Buttom-->
-            <div style="background-color: white; width: 47%; position: absolute; box-shadow: 0 0 12px rgba(0, 0, 0, 0.4); top: 0px; right: 0px; height: 90%; display: inline-block; border-radius: 20px; text-align: center;">
-              <img src="images/check-in.png" style="width: 40px; margin-top: 15px;">
-              <hr style="width: 60px; height: 3px; background-color: #e60f0f; border: 1px;">
-              <p style="font-family: Montserrat; letter-spacing: 3px; margin-top: 0px; font-weight: 600;">CHECK IN</p>
-            </div>
-          </div>
-
-          <div style="width: 90%; height: 120px; position: relative; background-color: transparent; border-radius: 10px; margin-top: 5px; border-top-left-radius: 0px; border-top-right-radius: 0px;">
-
-            <!--Flight Status Button-->
-            <div style="background-color: white; width: 47%; height: 90%; position: absolute; top: 0px; left: 0px; display: inline-block; border-radius: 20px; box-shadow: 0 0 12px rgba(0, 0, 0, 0.4); text-align: center;">
-              <img src="images/status.png" style="width: 40px; margin-top: 15px;">
-              <hr style="width: 60px; height: 3px; background-color: #e60f0f; border: 1px;">
-              <p style="font-family: Montserrat; letter-spacing: 3px; margin-top: 0px;font-weight: 600;">STATUS</p>
-            </div>
-
-            <!--Ace News Button-->
-            <div style="background-color: white; width: 47%; position: absolute; top: 0px; right: 0px; height: 90%; display: inline-block; border-radius: 20px; box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);text-align: center;">
-              <img src="images/news.png" style="width: 45px; margin-top: 15px;">
-              <hr style="width: 60px; height: 3px; background-color: #e60f0f; border: 1px;">
-              <p style="font-family: Montserrat; letter-spacing: 3px; margin-top: 0px;font-weight: 600;">NEWS</p>
-            </div>
-          </div>
-        </center>
-      </div>
-      
-      <!--navigation-->
-      <div id="unanimate-nav-def" style="width: 250px; background-color: #d6d6d6; height: 100vh; position: absolute; top: 0px; left: 0px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); margin-left: -260px">
-          <img src="images/backArrowNav.png" style="position: absolute; top: 30px; right: 30px; width: 10px;" onclick="unanimateNav()">
-          <img src="images/acelogo.png" style="width: 120px; margin: 20px;">
-          <h1 style="color: #e60f0f; margin: 0px; margin-left: 20px; font-family: Montserrat">Navigation</h1>
-          <button style="text-align: left; color: #e60f0f; width: 150px; height: 30px; background-color: transparent; border: none; margin: 0px; margin-top: 25px; margin-left: 20px; border-radius: 4px; font-family: Montserrat;">HOME</button>
-          <button style="text-align: left; color: #e60f0f; width: 150px; height: 30px; background-color: transparent; border: none; margin: 0px; margin-top: 10px; margin-left: 20px; border-radius: 4px; font-family: Montserrat;">NEWS</button>
-          <button style="text-align: left; color: #e60f0f; width: 150px; height: 30px; background-color: transparent; border: none; margin: 0px; margin-top: 10px; margin-left: 20px; border-radius: 4px; font-family: Montserrat;" onclick="window.location='bookFlight.html'">BOOK NOW</button>
-          <button style="text-align: left; color: #e60f0f; width: 150px; height: 30px; background-color: transparent; border: none; margin: 0px; margin-top: 10px; margin-left: 20px; border-radius: 4px; font-family: Montserrat;">CHECK IN</button>
-          <button style="text-align: left; color: #e60f0f; width: 150px; height: 30px; background-color: transparent; border: none; margin: 0px; margin-top: 10px; margin-left: 20px; border-radius: 4px; font-family: Montserrat;">FLIGHT STATUS</button>
-          <div style="position: absolute; margin-left: 20px; margin-top: 100%;">
-          <button style="text-align: left; color: #e60f0f; width: 150px; height: 30px; background-color: transparent; border: none;  border-radius: 4px; font-family: Montserrat; position: absolute;left: 0px; bottom: 0px;">Log Out</button>
-          </div>
-          <i style="position: absolute; color: #e60f0f; bottom: 20px; left: 25px; font-family: Montserrat; font-size: 12px;">Copyright Ace Airlines™ 2020</i>
       </div>
     </div>
   </body>

@@ -1,6 +1,7 @@
 <html>
-  <body style="margin: 0px;">
+  <body style="margin: 0px; overflow-x: hidden">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;900&display=swap" rel="stylesheet">
+    <title>Book A Flight | Ace Airlines</title>
     <center>
       <script src="book-a-flight.js"></script>
     <div style="width: 100vw; height: 125px; background-color: #e60f0f; position: relative;">
@@ -9,10 +10,10 @@
         <img src="images/profile.png" style="width: 30px; position: absolute; right: 3px; top: 13px;">
         <p style="font-family: Montserrat; color: white; font-weight: 700; letter-spacing: 3px; padding-top: 20px;">BOOK A FLIGHT</p>
       </div>
-      <input type="text" style="border: 2px solid; border-radius: 15px; width: 80%; height: 40px; position: absolute; bottom: 15px; left: 50%; margin-left: -40%; text-align:center; font-family: Montserrat;" placeholder="Search for a destination.">
+      <input id="searchDest" type="text" style="border: 2px solid; border-radius: 15px; width: 80%; height: 40px; position: absolute; bottom: 15px; left: 50%; margin-left: -40%; text-align:center; font-family: Montserrat;" placeholder="Search for a destination.">
     </div>
     <div id="results">
-      <h1 style="font-family: Montserrat; color: black; font-weight: 700; letter-spacing: 3px; padding-top: 20px; font-size: 15px; width: 80%; text-align: left; height: 20px;">TOP RESULTS</h1>
+      <h1 style="font-family: Montserrat; color: black; font-weight: 700; letter-spacing: 3px; padding-top: 10px; font-size: 15px; width: 80%; text-align: left; height: 20px;">TOP RESULTS</h1>
       <div style="width: 80%; height: 60px; border-radius: 7px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); margin-top: 20px; border-left: 10px solid #e60f0f; text-align: left; position: relative;">
         <img src="images/airplaneLogo.png" style="width: 45px; position: absolute; top: 50%; margin-top: -22.5px; margin-left: 10px;">
         <p style="color: #e60f0f; font-family: Montserrat; font-weight: 600; font-size: 13px; margin-left: 70px; position: absolute; top: 0px; margin-top: 7px;">NEW YORK - HOUSTON</p>
@@ -61,7 +62,7 @@
         <img src="images/arrow.png" style="width: 25px; position: absolute; right: 20px; top: 22px;">
       </div>
 
-      <button style="background-color: #e60f0f; width: 80%; color: white; height: 35px; border-radius: 10px; margin-top: 10px; font-family: Montserrat;">CHECK OUT OTHER OPTIONS</button>
+      <button style="background-color: #e60f0f; width: 80%; color: white; height: 35px; border-radius: 12px; margin-top: 20px; font-family: Montserrat; border: 1px solid transparent;">CHECK OUT OTHER OPTIONS</button>
     </div>
     </center>
   </body>
